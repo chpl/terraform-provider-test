@@ -19,7 +19,7 @@ run "create_bucket" {
 
   # Check index.html hash matches
   assert {
-    condition     = aws_s3_object.index.etag == filemd5("./www/index.html")
+    condition     = aws_s3_object.index.etag == filemd5("./www/error.html")
     error_message = "Invalid eTag for index.html"
   }
 
