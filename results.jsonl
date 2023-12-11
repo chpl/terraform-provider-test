@@ -2,20 +2,22 @@
   "@level": "info",
   "@message": "Terraform 1.6.5",
   "@module": "terraform.ui",
-  "@timestamp": "2023-12-11T09:53:20.030433+02:00",
+  "@timestamp": "2023-12-11T10:01:28.325696+02:00",
   "terraform": "1.6.5",
   "type": "version",
   "ui": "1.2"
 }
 {
   "@level": "info",
-  "@message": "Found 1 file and 3 run blocks",
+  "@message": "Found 2 files and 3 run blocks",
   "@module": "terraform.ui",
-  "@timestamp": "2023-12-11T09:53:20.519330+02:00",
+  "@timestamp": "2023-12-11T10:01:28.565006+02:00",
   "test_abstract": {
-    "tests/website.tftest.hcl": [
+    "tests/s3.tftest.hcl": [
       "setup_tests",
-      "create_bucket",
+      "create_bucket"
+    ],
+    "tests/site.tftest.hcl": [
       "website_is_running"
     ]
   },
@@ -23,12 +25,12 @@
 }
 {
   "@level": "info",
-  "@message": "tests/website.tftest.hcl... in progress",
+  "@message": "tests/s3.tftest.hcl... in progress",
   "@module": "terraform.ui",
-  "@testfile": "tests/website.tftest.hcl",
-  "@timestamp": "2023-12-11T09:53:20.521234+02:00",
+  "@testfile": "tests/s3.tftest.hcl",
+  "@timestamp": "2023-12-11T10:01:28.566665+02:00",
   "test_file": {
-    "path": "tests/website.tftest.hcl",
+    "path": "tests/s3.tftest.hcl",
     "progress": "starting"
   },
   "type": "test_file"
@@ -37,11 +39,11 @@
   "@level": "info",
   "@message": "  \"setup_tests\"... in progress",
   "@module": "terraform.ui",
-  "@testfile": "tests/website.tftest.hcl",
+  "@testfile": "tests/s3.tftest.hcl",
   "@testrun": "setup_tests",
-  "@timestamp": "2023-12-11T09:53:20.521783+02:00",
+  "@timestamp": "2023-12-11T10:01:28.566744+02:00",
   "test_run": {
-    "path": "tests/website.tftest.hcl",
+    "path": "tests/s3.tftest.hcl",
     "run": "setup_tests",
     "progress": "starting",
     "elapsed": 0
@@ -52,11 +54,11 @@
   "@level": "info",
   "@message": "  \"setup_tests\"... pass",
   "@module": "terraform.ui",
-  "@testfile": "tests/website.tftest.hcl",
+  "@testfile": "tests/s3.tftest.hcl",
   "@testrun": "setup_tests",
-  "@timestamp": "2023-12-11T09:53:20.750824+02:00",
+  "@timestamp": "2023-12-11T10:01:28.710769+02:00",
   "test_run": {
-    "path": "tests/website.tftest.hcl",
+    "path": "tests/s3.tftest.hcl",
     "run": "setup_tests",
     "progress": "complete",
     "status": "pass"
@@ -67,11 +69,11 @@
   "@level": "info",
   "@message": "  \"create_bucket\"... in progress",
   "@module": "terraform.ui",
-  "@testfile": "tests/website.tftest.hcl",
+  "@testfile": "tests/s3.tftest.hcl",
   "@testrun": "create_bucket",
-  "@timestamp": "2023-12-11T09:53:20.750875+02:00",
+  "@timestamp": "2023-12-11T10:01:28.710796+02:00",
   "test_run": {
-    "path": "tests/website.tftest.hcl",
+    "path": "tests/s3.tftest.hcl",
     "run": "create_bucket",
     "progress": "starting",
     "elapsed": 0
@@ -82,11 +84,11 @@
   "@level": "info",
   "@message": "  \"create_bucket\"... fail",
   "@module": "terraform.ui",
-  "@testfile": "tests/website.tftest.hcl",
+  "@testfile": "tests/s3.tftest.hcl",
   "@testrun": "create_bucket",
-  "@timestamp": "2023-12-11T09:53:21.962890+02:00",
+  "@timestamp": "2023-12-11T10:01:29.589792+02:00",
   "test_run": {
-    "path": "tests/website.tftest.hcl",
+    "path": "tests/s3.tftest.hcl",
     "run": "create_bucket",
     "progress": "complete",
     "status": "error"
@@ -97,9 +99,9 @@
   "@level": "error",
   "@message": "Error: failed to get shared config profile, demo",
   "@module": "terraform.ui",
-  "@testfile": "tests/website.tftest.hcl",
+  "@testfile": "tests/s3.tftest.hcl",
   "@testrun": "create_bucket",
-  "@timestamp": "2023-12-11T09:53:21.966173+02:00",
+  "@timestamp": "2023-12-11T10:01:29.591572+02:00",
   "diagnostic": {
     "severity": "error",
     "summary": "failed to get shared config profile, demo",
@@ -131,27 +133,12 @@
 }
 {
   "@level": "info",
-  "@message": "  \"website_is_running\"... skip",
+  "@message": "tests/s3.tftest.hcl... tearing down",
   "@module": "terraform.ui",
-  "@testfile": "tests/website.tftest.hcl",
-  "@testrun": "website_is_running",
-  "@timestamp": "2023-12-11T09:53:21.966385+02:00",
-  "test_run": {
-    "path": "tests/website.tftest.hcl",
-    "run": "website_is_running",
-    "progress": "complete",
-    "status": "skip"
-  },
-  "type": "test_run"
-}
-{
-  "@level": "info",
-  "@message": "tests/website.tftest.hcl... tearing down",
-  "@module": "terraform.ui",
-  "@testfile": "tests/website.tftest.hcl",
-  "@timestamp": "2023-12-11T09:53:21.966431+02:00",
+  "@testfile": "tests/s3.tftest.hcl",
+  "@timestamp": "2023-12-11T10:01:29.591718+02:00",
   "test_file": {
-    "path": "tests/website.tftest.hcl",
+    "path": "tests/s3.tftest.hcl",
     "progress": "teardown"
   },
   "type": "test_file"
@@ -160,11 +147,11 @@
   "@level": "info",
   "@message": "  \"setup_tests\"... tearing down",
   "@module": "terraform.ui",
-  "@testfile": "tests/website.tftest.hcl",
+  "@testfile": "tests/s3.tftest.hcl",
   "@testrun": "setup_tests",
-  "@timestamp": "2023-12-11T09:53:21.966477+02:00",
+  "@timestamp": "2023-12-11T10:01:29.591739+02:00",
   "test_run": {
-    "path": "tests/website.tftest.hcl",
+    "path": "tests/s3.tftest.hcl",
     "run": "setup_tests",
     "progress": "teardown",
     "elapsed": 0
@@ -173,12 +160,12 @@
 }
 {
   "@level": "info",
-  "@message": "tests/website.tftest.hcl... fail",
+  "@message": "tests/s3.tftest.hcl... fail",
   "@module": "terraform.ui",
-  "@testfile": "tests/website.tftest.hcl",
-  "@timestamp": "2023-12-11T09:53:22.120135+02:00",
+  "@testfile": "tests/s3.tftest.hcl",
+  "@timestamp": "2023-12-11T10:01:29.688617+02:00",
   "test_file": {
-    "path": "tests/website.tftest.hcl",
+    "path": "tests/s3.tftest.hcl",
     "progress": "complete",
     "status": "error"
   },
@@ -186,15 +173,117 @@
 }
 {
   "@level": "info",
-  "@message": "Failure! 1 passed, 1 failed, 1 skipped.",
+  "@message": "tests/site.tftest.hcl... in progress",
   "@module": "terraform.ui",
-  "@timestamp": "2023-12-11T09:53:22.120168+02:00",
+  "@testfile": "tests/site.tftest.hcl",
+  "@timestamp": "2023-12-11T10:01:29.688646+02:00",
+  "test_file": {
+    "path": "tests/site.tftest.hcl",
+    "progress": "starting"
+  },
+  "type": "test_file"
+}
+{
+  "@level": "info",
+  "@message": "  \"website_is_running\"... in progress",
+  "@module": "terraform.ui",
+  "@testfile": "tests/site.tftest.hcl",
+  "@testrun": "website_is_running",
+  "@timestamp": "2023-12-11T10:01:29.688664+02:00",
+  "test_run": {
+    "path": "tests/site.tftest.hcl",
+    "run": "website_is_running",
+    "progress": "starting",
+    "elapsed": 0
+  },
+  "type": "test_run"
+}
+{
+  "@level": "info",
+  "@message": "  \"website_is_running\"... fail",
+  "@module": "terraform.ui",
+  "@testfile": "tests/site.tftest.hcl",
+  "@testrun": "website_is_running",
+  "@timestamp": "2023-12-11T10:01:29.716921+02:00",
+  "test_run": {
+    "path": "tests/site.tftest.hcl",
+    "run": "website_is_running",
+    "progress": "complete",
+    "status": "error"
+  },
+  "type": "test_run"
+}
+{
+  "@level": "error",
+  "@message": "Error: Reference to unknown run block",
+  "@module": "terraform.ui",
+  "@testfile": "tests/site.tftest.hcl",
+  "@testrun": "website_is_running",
+  "@timestamp": "2023-12-11T10:01:29.717059+02:00",
+  "diagnostic": {
+    "severity": "error",
+    "summary": "Reference to unknown run block",
+    "detail": "The run block \"create_bucket\" does not exist within this test file. You can only reference run blocks that are in the same test file and will execute before the current run block.",
+    "range": {
+      "filename": "tests/site.tftest.hcl",
+      "start": {
+        "line": 9,
+        "column": 16,
+        "byte": 121
+      },
+      "end": {
+        "line": 9,
+        "column": 33,
+        "byte": 138
+      }
+    },
+    "snippet": {
+      "context": "run \"website_is_running\"",
+      "code": "    endpoint = run.create_bucket.website_endpoint",
+      "start_line": 9,
+      "highlight_start_offset": 15,
+      "highlight_end_offset": 32,
+      "values": []
+    }
+  },
+  "type": "diagnostic"
+}
+{
+  "@level": "info",
+  "@message": "tests/site.tftest.hcl... tearing down",
+  "@module": "terraform.ui",
+  "@testfile": "tests/site.tftest.hcl",
+  "@timestamp": "2023-12-11T10:01:29.717075+02:00",
+  "test_file": {
+    "path": "tests/site.tftest.hcl",
+    "progress": "teardown"
+  },
+  "type": "test_file"
+}
+{
+  "@level": "info",
+  "@message": "tests/site.tftest.hcl... fail",
+  "@module": "terraform.ui",
+  "@testfile": "tests/site.tftest.hcl",
+  "@timestamp": "2023-12-11T10:01:29.717100+02:00",
+  "test_file": {
+    "path": "tests/site.tftest.hcl",
+    "progress": "complete",
+    "status": "error"
+  },
+  "type": "test_file"
+}
+{
+  "@level": "info",
+  "@message": "Failure! 1 passed, 2 failed.",
+  "@module": "terraform.ui",
+  "@timestamp": "2023-12-11T10:01:29.717116+02:00",
   "test_summary": {
     "status": "error",
     "passed": 1,
     "failed": 0,
-    "errored": 1,
-    "skipped": 1
+    "errored": 2,
+    "skipped": 0
   },
   "type": "test_summary"
 }

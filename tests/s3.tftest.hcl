@@ -19,7 +19,7 @@ run "create_bucket" {
 
   # Check index.html hash matches
   assert {
-    condition     = aws_s3_object.index.etag == filemd5("./www/error.html")
+    condition     = aws_s3_object.index.etag == filemd5("./www/index.html")
     error_message = "Invalid eTag for index.html"
   }
 
@@ -27,5 +27,22 @@ run "create_bucket" {
   assert {
     condition     = aws_s3_object.error.etag == filemd5("./www/error.html")
     error_message = "Invalid eTag for error.html"
+  }
+}
+
+run "website_is_running" {
+  command = plan
+
+  module {
+    source = "./tests/content"
+  }
+
+  variables {
+    endpoint = run.create_bucket.website_endpoint
+  }
+
+  assert {
+    condition     = data.http.index.status_code == 200
+    error_message = "Website responded with HTTP status ${data.http.index.status_code}"
   }
 }
